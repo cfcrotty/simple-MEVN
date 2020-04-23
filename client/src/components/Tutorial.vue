@@ -60,7 +60,7 @@ export default {
         });
     },
     updatePublished(status) {
-      let data = {
+      const data = {
         id: this.currentTutorial.id,
         title: this.currentTutorial.title,
         description: this.currentTutorial.description,

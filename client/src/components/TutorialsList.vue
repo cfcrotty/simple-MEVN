@@ -46,7 +46,7 @@
   </div>
 </template>
 <script>
-import TutorialDataService from "./../services/TutorialDataService";
+import TutorialDataService from "../services/TutorialDataService";
 
 export default {
   name: "tutorials-list",
