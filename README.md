@@ -1,5 +1,5 @@
 # simple-MEVN
-Create a simple app using MySQL, Express, Vue.js and Node.js.
+Create a simple app using MySQL, Express, Vue.js and Node.js with the help of Vegibit Vue.js Express Tutorial.
 
 ## Project setup
 ```
