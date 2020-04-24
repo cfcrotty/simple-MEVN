@@ -1,6 +1,8 @@
 # simple-MEVN
 Create a simple app using MySQL, Express, Vue.js and Node.js with the help of Vegibit Vue.js Express Tutorial.
 
+Deployed at Heroku: https://simple-mevn-cc.herokuapp.com/
+
 ## Project setup
 ```
 npm install
