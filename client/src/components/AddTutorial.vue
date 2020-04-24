@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     saveTutorial() {
-      let data = {
+      const data = {
         title: this.tutorial.title,
         description: this.tutorial.description
       };
