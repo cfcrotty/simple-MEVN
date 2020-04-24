@@ -26,9 +26,9 @@ db.sequelize.sync();
 // });
 
 // Serve up static assets (usually on heroku)
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-// }
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 require("./routes/tutorial.routes")(app);
 // simple route
