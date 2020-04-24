@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const morgan = require("morgan");
+const path = require('path');
 
 const app = express();
 
@@ -10,7 +11,7 @@ var corsOptions = {
   origin: "http://localhost:8080"
 };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
@@ -32,7 +33,7 @@ require("./routes/tutorial.routes")(app);
 
 app.get("*", function(req, res) {
   //res.sendFile(path.join(__dirname, "./client/build/index.html"));
-  res.sendFile(path.join(__dirname, "./public/index.html"));
+  res.sendFile(path.join(__dirname, ".client//public/index.html"));
 });
 
 // set port, listen for requests
