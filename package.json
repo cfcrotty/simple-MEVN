@@ -26,6 +26,7 @@
   "author": "cara c",
   "license": "ISC",
   "dependencies": {
+    "@vue/eslint-config-airbnb": "^5.0.2",
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "core-js": "^3.6.4",
