@@ -3,7 +3,7 @@ import axios from 'axios';
 
 class TutorialDataService {
     getAll() {
-        return axios.get("/api/tutorials");
+        return axios.get("/");
     }
 
     get(id) {
