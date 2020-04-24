@@ -6,9 +6,15 @@ const path = require('path');
 
 const app = express();
 
+// app.use((req, res, next) => {
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//   res.setHeader('Access-Control-Allow-Headers', 'Content-type,Authorization');
+//   next();
+// });
+
 app.use(morgan("tiny"));
 var corsOptions = {
-  origin: "http://localhost:8080"
+  origin: "https://simple-mevn-cc.herokuapp.com/"
 };
 
 app.use(cors(corsOptions));
@@ -18,6 +24,10 @@ app.use(bodyParser.json());
 // app.use(bodyParser.text());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// // Setting up express to use json and set it to req.body
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
 
 const db = require("./models");
 db.sequelize.sync();
