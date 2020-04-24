@@ -1,32 +1,33 @@
-import http from "../http-common";
+import axios from 'axios';
+// import http from "../http-common";
 
 class TutorialDataService {
     getAll() {
-        return http.get("/tutorials");
+        return axios.get("/api/tutorials");
     }
 
     get(id) {
-        return http.get(`/tutorials/${id}`);
+        return axios.get(`/api/tutorials/${id}`);
     }
 
     create(data) {
-        return http.post("/tutorials", data);
+        return axios.post("/api/tutorials", data);
     }
 
     update(id, data) {
-        return http.put(`/tutorials/${id}`, data);
+        return axios.put(`/api/tutorials/${id}`, data);
     }
 
     delete(id) {
-        return http.delete(`/tutorials/${id}`);
+        return axios.delete(`/api/tutorials/${id}`);
     }
 
     deleteAll() {
-        return http.delete(`/tutorials`);
+        return axios.delete(`/api/tutorials`);
     }
 
     findByTitle(title) {
-        return http.get(`/tutorials?title=${title}`);
+        return axios.get(`/api/tutorials?title=${title}`);
     }
 }
 
