@@ -1,5 +1,5 @@
 # simple-MEVN
-Create a simple app using MySQL, Express, Vue.js and Node.js with the help of Bezckoder Node.js Rest APIs example with Express, Sequelize & MySQL.
+Create a simple app using MySQL, Express, Vue.js and Node.js with the help of Bezkoder - Node.js Rest APIs example with Express, Sequelize & MySQL.
 
 Deployed at Heroku: https://simple-mevn-cc.herokuapp.com/
 
