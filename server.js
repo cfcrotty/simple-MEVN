@@ -6,11 +6,11 @@ const path = require('path');
 
 const app = express();
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-type,Authorization');
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//   res.setHeader('Access-Control-Allow-Headers', 'Content-type,Authorization');
+//   next();
+// });
 
 app.use(morgan("tiny"));
 var corsOptions = {
@@ -21,13 +21,8 @@ app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
-// app.use(bodyParser.text());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
-
-// // Setting up express to use json and set it to req.body
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
 
 const db = require("./models");
 db.sequelize.sync();
@@ -41,13 +36,8 @@ if (process.env.NODE_ENV === "production") {
 }
 
 require("./routes/tutorial.routes")(app);
-// simple route
-// app.get("*", (req, res) => {
-//   res.json({ message: "Welcome to MEVN application." });
-// });
 
 app.get("*", function(req, res) {
-  //res.sendFile(path.join(__dirname, "./client/build/index.html"));
   res.sendFile(path.join(__dirname, "./client/dist/index.html"));
 });
 
