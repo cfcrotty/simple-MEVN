@@ -1,33 +1,33 @@
-import axios from 'axios';
-// import http from "../http-common";
+// import http from 'axios'; // for production or heroku use
+import http from "../http-common"; // for development use
 
 class TutorialDataService {
     getAll() {
-        return axios.get("/api/tutorials");
+        return http.get("/api/tutorials");
     }
 
     get(id) {
-        return axios.get(`/api/tutorials/${id}`);
+        return http.get(`/api/tutorials/${id}`);
     }
 
     create(data) {
-        return axios.post("/api/tutorials", data);
+        return http.post("/api/tutorials", data);
     }
 
     update(id, data) {
-        return axios.put(`/api/tutorials/${id}`, data);
+        return http.put(`/api/tutorials/${id}`, data);
     }
 
     delete(id) {
-        return axios.delete(`/api/tutorials/${id}`);
+        return http.delete(`/api/tutorials/${id}`);
     }
 
     deleteAll() {
-        return axios.delete(`/api/tutorials`);
+        return http.delete(`/api/tutorials`);
     }
 
     findByTitle(title) {
-        return axios.get(`/api/tutorials?title=${title}`);
+        return http.get(`/api/tutorials?title=${title}`);
     }
 }
 

@@ -25,3 +25,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+Note:
+-careful on corsOption for dev/local: http://localhost:8080
+-setup db.config.js for dev/local database
+-update TutorialDataService.js for dev/local use

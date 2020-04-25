@@ -8,8 +8,14 @@ const app = express();
 
 app.use(morgan("tiny"));
 var corsOptions = {
-  origin: "https://simple-mevn-cc.herokuapp.com/"
+  origin: "http://localhost:8080"
 };
+
+if (process.env.NODE_ENV === "production") {
+  corsOptions = {
+    origin: "https://simple-mevn-cc.herokuapp.com/"
+  };
+}
 
 app.use(cors(corsOptions));
 

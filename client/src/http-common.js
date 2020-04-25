@@ -1,8 +1,7 @@
 import axios from "axios";
 
-// https://simple-mevn-cc.herokuapp.com
 export default axios.create({
-    baseURL: "https://simple-mevn-cc.herokuapp.com/api",
+    baseURL: "http://localhost:4000",
     headers: {
         "Content-type": "application/json"
     }
